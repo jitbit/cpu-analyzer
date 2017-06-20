@@ -1,5 +1,5 @@
-#Cpu analyzer
-forked from Sam Saffron's code which seems adandoned, see: http://samsaffron.com/archive/2009/11/11/Diagnosing+runaway+CPU+in+a+Net+production+application
+# Cpu analyzer
+Forked from Sam Saffron's code which seems adandoned, see: http://samsaffron.com/archive/2009/11/11/Diagnosing+runaway+CPU+in+a+Net+production+application
 
 All required dependencies are now added via NuGET, no need to link MS libraried.
 
