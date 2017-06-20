@@ -101,13 +101,24 @@ namespace cpu_analyzer {
             snapshot.UserTime = user;
             snapshot.StackTrace = new List<string>();
 
-            foreach (MDbgFrame frame in thread.Frames) {
-                try {
-                    snapshot.StackTrace.Add(frame.Function.FullName);
-                } catch {
-                    // no frame, so ignore
-                }
-            }
+			try
+			{
+				foreach (MDbgFrame frame in thread.Frames)
+				{
+					try
+					{
+						snapshot.StackTrace.Add(frame.Function.FullName);
+					}
+					catch
+					{
+						// no frame, so ignore
+					}
+				}
+			}
+			catch
+			{
+				// ignore the "cannot attach to thred" errors, we can't do anything about it, but leaving unhandled destroys the whole w3wp in production :(
+			}
 
             return snapshot;
         }
