@@ -17,4 +17,4 @@ The tool output can be quite lengthy, so use it like this:
 
 `cpu-analyser.exe w3wp.exe >> log.txt`
 
-We used this tool many times to successfully find CPU "leaks" in our [helpdesk app](https://www.jitbit.com/web-helpdesk/) on production server, which has hundreds of background threads.
+We used this tool many times to successfully find CPU "leaks" in our [helpdesk app](https://jitbit.github.com/helpdesk/) on production server, which has hundreds of background threads.
